@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Snake Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Snake Game</h1>
+  <button id="startButton" onclick="startGame()">Start / Restart</button>
+  <div id="score">Score: 0</div>
+  <div id="gameContainer">
+    <canvas id="gameCanvas" width="300" height="300"></canvas>
+    <div class="controls">
+      <button onclick="changeDirection('up')">↑</button>
+      <div>
+        <button onclick="changeDirection('left')">←</button>
+        <button onclick="changeDirection('right')">→</button>
+      </div>
+      <button onclick="changeDirection('down')">↓</button>
+    </div>
+  </div>
+
+  <!-- Sound slots -->
+  <audio id="moveSound" src="move.mp3"></audio>
+  <audio id="eatSound" src="ghop.mp3"></audio>
+  <audio id="gameOverSound" src="dd.mp3"></audio>
+  <audio id="bgMusic" src="bgm.mp3" loop></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
