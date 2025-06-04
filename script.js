@@ -68,7 +68,8 @@ function update() {
   // compute new head
   const head = { x: snake[0].x + (direction === "RIGHT" ? 1 : direction === "LEFT" ? -1 : 0),
                  y: snake[0].y + (direction === "DOWN" ? 1 : direction === "UP"   ? -1 : 0) };
-
+console.log("Snake:", snake);
+  
   // collision?
   if (
     head.x < 0 || head.x >= cols ||
